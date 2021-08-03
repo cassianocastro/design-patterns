@@ -7,10 +7,13 @@ use Creational\{
     StaticFactory\Test as StaticFactory,
     AbstractFactory\Test as AbstractFactory,
     AbstractFactory\UnixWriterFactory,
-    AbstractFactory\WindowsWriterFactory
+    AbstractFactory\WindowsWriterFactory,
+    Pool\Test as Pool,
+    Prototype\Test as Prototype
 };
 
 use Comportamental\NullObject\Test as NullObject;
+use Estrutural\DependencyInjection\Test as DI;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_erros', 1);
@@ -51,9 +54,23 @@ $abstractFactory->canCreateCSVwriter(new UnixWriterFactory());
 print "Windows:\n";
 $abstractFactory->canCreateCSVwriter(new WindowsWriterFactory());
 
+echo "<h2>Pool:</h2>";
+$pool = new Pool();
+$pool->canGetNewInstanceWithGet();
+$pool->canGetSameInstanceTwiceWhenDisposingItFirst();
+
+echo "<h2>Prototype:</h2>";
+$proto = new Prototype();
+$proto->canGetFooBook();
+
 echo "<h2>Object NULL:</h2>";
 $nullObject = new NullObject();
 $nullObject->testNullObject();
 $nullObject->testStdLogger();
+
+echo "<h2>Dependency Injection:</h2>";
+$di = (new DI())->testDependencyInjection();
+
+
 echo "</pre>";
 ?>
