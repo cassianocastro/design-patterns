@@ -1,1 +1,5 @@
-Padrões de Projeto escritos em PHP.
+# Patterns
+
+## Description
+
+Design Patterns written in PHP.
