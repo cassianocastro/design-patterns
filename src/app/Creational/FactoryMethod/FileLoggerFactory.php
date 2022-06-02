@@ -1,0 +1,22 @@
+<?php
+
+namespace Creational\FactoryMethod;
+
+/**
+ *
+ */
+class FileLoggerFactory implements namespace\LoggerFactory
+{
+
+    private $filePath;
+
+    public function __construct(string $filePath)
+    {
+        $this->filePath = $filePath;
+    }
+
+    public function createLogger(): Logger
+    {
+        return new FileLogger($this->filePath);
+    }
+}
