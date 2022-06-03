@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\Pool;
+namespace App\Creational\Pool;
 
 use Countable;
 
@@ -10,6 +10,7 @@ use Countable;
  */
 class WorkerPool implements Countable
 {
+
     /**
     * @var StringReverseWorker[]
     */
@@ -20,29 +21,30 @@ class WorkerPool implements Countable
     */
     private array $freeWorkers;
 
-    function __construct()
+    public function __construct()
     {
         $this->ocuppiedWorkers = [];
-        $this->freeWorkers = [];
+        $this->freeWorkers     = [];
     }
 
     public function get(): StringReverseWorker
     {
-        if (count($this->freeWorkers) == 0) {
+        if ( count($this->freeWorkers) == 0 )
             $worker = new StringReverseWorker();
-        } else {
+        else
             $worker = array_pop($this->freeWorkers);
-        }
 
         $this->ocuppiedWorkers[spl_object_hash($worker)] = $worker;
+
         return $worker;
     }
 
-    public function dispose(StringReverseWorker $worker)
+    public function dispose(StringReverseWorker $worker): void
     {
         $key = spl_object_hash($worker);
 
-        if (isset($this->ocuppiedWorkers[$key])) {
+        if ( isset($this->ocuppiedWorkers[$key]) )
+        {
             unset($this->ocuppiedWorkers[$key]);
             $this->freeWorkers[$key] = $worker;
         }

@@ -1,15 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\Builder;
+namespace App\Creational\Builder;
 
-use Creational\Builder\Parts\{
-    Door,
-    Engine,
-    Wheel,
-    Truck,
-    Vehicle
-};
+use App\Creational\Builder\Parts\{ Door, Engine, Wheel, Truck, Vehicle };
 
 /**
  *

@@ -1,13 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\Builder;
+namespace App\Creational\Builder;
 
 /**
  *
  */
 interface Builder
 {
+
     public function createVehicle();
 
     public function addWheel();
@@ -16,6 +17,6 @@ interface Builder
 
     public function addDors();
 
-    public function getVehicle(): namespace\Parts\Vehicle;
+    public function getVehicle(): Parts\Vehicle;
 
 }

@@ -1,37 +1,33 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\Singleton;
+namespace App\Creational\Singleton;
 
 use Exception;
 
 /**
- * CONSIDERADO UM ANTI-PATTERN! PARA MELHOR TESTABILIDADE E MANUTENIBILIDADE USE INJEÇÃO DEPENDÊNCIAS!
- * Ter uma única instância da classe na aplicação que será responsável por gerenciar todas as chamadas a ela.
-
- * Conexão ao banco de dados (DB Connector)
- * Logger
- * Arquivo de lock para a aplicação (existe apenas um em todo o sistema de arquivos …)
+ *
  */
 final class Singleton
 {
-	
-	private static ?Singleton $instance = null;
+
+	private static ?self $instance = NULL;
 
 	private function __construct() {}
 
-	private function __clone(){}
+	private function __clone() {}
 
-	public function __wakeup(){
+	public function __wakeup()
+    {
 		throw new Exception("Cannot unserialize Singleton");
 	}
 
-	public static function getInstance(): Singleton
+	static public function getInstance(): self
 	{
-		if ( is_null(static::$instance) ) {
-			static::$instance = new static();
+		if ( is_null(self::$instance) )
+        {
+			self::$instance = new self();
 		}
-		return static::$instance;
+		return self::$instance;
 	}
-
 }

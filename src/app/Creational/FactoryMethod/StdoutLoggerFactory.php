@@ -1,11 +1,12 @@
 <?php
+declare(strict_types=1);
 
-namespace Creational\FactoryMethod;
+namespace App\Creational\FactoryMethod;
 
 /**
  *
  */
-class StdoutLoggerFactory implements namespace\LoggerFactory
+class StdoutLoggerFactory implements LoggerFactory
 {
 
     public function createLogger(): Logger

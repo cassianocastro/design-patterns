@@ -1,17 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\Pool;
-
-use DateTime;
+namespace App\Creational\Pool;
 
 /**
  *
  */
 class StringReverseWorker
 {
-
-    public function __construct() {}
 
     public function run(string $text): string
     {

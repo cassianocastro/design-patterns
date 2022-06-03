@@ -1,11 +1,12 @@
 <?php
+declare(strict_types=1);
 
-namespace Creational\FactoryMethod;
+namespace App\Creational\FactoryMethod;
 
 /**
  *
  */
-class FileLoggerFactory implements namespace\LoggerFactory
+class FileLoggerFactory implements LoggerFactory
 {
 
     private $filePath;

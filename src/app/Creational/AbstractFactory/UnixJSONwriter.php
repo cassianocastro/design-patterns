@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\AbstractFactory;
+namespace App\Creational\AbstractFactory;
 
 /**
  *

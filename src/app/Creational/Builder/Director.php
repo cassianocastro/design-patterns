@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Creational\Builder;
+namespace App\Creational\Builder;
 
 /**
  *
@@ -9,7 +9,7 @@ namespace Creational\Builder;
 class Director
 {
 
-    public function build(Builder $builder): namespace\Parts\Vehicle
+    public function build(Builder $builder): Parts\Vehicle
     {
         $builder->createVehicle();
         $builder->addDors();
