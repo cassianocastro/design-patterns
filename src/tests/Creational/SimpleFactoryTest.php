@@ -12,9 +12,11 @@ use PHPUnit\Framework\TestCase;
 final class SimpleFactoryTest extends TestCase
 {
 
-	public function testInstanceOfBicycle(): void
+    /**
+     * @test
+     */
+	public function instanceOfBicycle(): void
 	{
-
 		$bicycle = (new SimpleFactory())->createBicycle();
 
 		self::assertInstanceOf(Bicycle::class, $bicycle);
