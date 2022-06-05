@@ -1,18 +1,21 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-		{
-			"label": "My Task",
-			"command": "echo hello",
-			"type": "shell",
-			"args": [],
-			"problemMatcher": [
-				"$tsc"
-			],
-			"presentation": {
-				"reveal": "always"
-			},
-			"group": "build"
-		}
-	]
+        {
+            "label": "Run Tests",
+            "type": "shell",
+            "linux": {
+                "command": "./test.sh"
+            },
+            "windows": {
+                "command": ".\\test.cmd"
+            },
+            "group": "test",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": []
+        }
+    ]
 }
