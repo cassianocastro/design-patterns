@@ -36,5 +36,9 @@
 	},
     "require-dev": {
         "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "tests": "phpunit",
+        "args": "@tests -- --configuration ./phpunit.xml"
     }
 }
