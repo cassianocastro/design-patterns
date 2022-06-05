@@ -1,8 +1,11 @@
 {
-	"recommendations": [
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "vscode-icons-team.vscode-icons",
+        "EditorConfig.EditorConfig",
+        "HookyQR.beautify"
+    ],
+    "unwantedRecommendations": [
 
-	],
-	"unwantedRecommendations": [
-
-	]
+    ]
 }
