@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="./vendor/autoload.php" cacheResult="false" colors="true">
+<phpunit
+  bootstrap="./vendor/autoload.php"
+  cacheResult="false"
+  colors="true"
+  verbose="true">
 	<testsuites>
 		<testsuite name="test">
-			<directory>src/tests/Behavioral</directory>
-      <directory>src/tests/Creational</directory>
-      <directory>src/tests/Structural</directory>
+			<directory suffix=".tst">src/tests/Behavioral</directory>
+      <directory suffix=".tst">src/tests/Creational</directory>
+      <directory suffix=".tst">src/tests/Structural</directory>
+      <!-- <directory suffix=".tst">src/tests/Other</directory> -->
 		</testsuite>
 	</testsuites>
 </phpunit>
