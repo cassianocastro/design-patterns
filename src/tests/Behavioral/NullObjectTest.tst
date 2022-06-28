@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Behavioral;
 
-use App\Comportamental\NullObject\{ PrintLogger, NullLogger, Service };
+use App\Behavioral\NullObject\{ PrintLogger, NullLogger, Service };
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -24,7 +24,7 @@ final class NullObjectTest extends TestCase
         $service = new Service(new PrintLogger());
         $this->expectOutputString(
             "Nós estamos no método" .
-            " App\\Comportamental\\NullObject\\Service::doSomething"
+            " App\\Behavioral\\NullObject\\Service::doSomething"
         );
         $service->doSomething();
     }

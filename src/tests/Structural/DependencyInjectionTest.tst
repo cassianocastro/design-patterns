@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Structural;
 
-use App\Estrutural\DependencyInjection\{ DatabaseConfig, DatabaseConnection };
+use App\Structural\DependencyInjection\{ DatabaseConfig, DatabaseConnection };
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Behavioral;
 
-use App\Comportamental\Observer\{ UserObserver, User };
+use App\Behavioral\Observer\{ UserObserver, User };
 use PHPUnit\Framework\TestCase;
 
 /**
