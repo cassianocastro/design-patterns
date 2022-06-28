@@ -1,7 +1,7 @@
 {
     "editor.autoClosingBrackets": "always",
     "editor.bracketPairColorization.enabled": true,
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
 
     "files.eol": "\n",
     "files.encoding": "utf8",
