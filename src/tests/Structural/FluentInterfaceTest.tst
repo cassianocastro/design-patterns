@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Tests\Behavioral;
+namespace Tests\Structural;
 
 use App\Structural\FluentInterface\Sql;
 use PHPUnit\Framework\TestCase;
