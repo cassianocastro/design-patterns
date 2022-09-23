@@ -6,7 +6,7 @@
   colors="true"
   verbose="true">
 	<testsuites>
-		<testsuite name="test">
+		<testsuite name="tests">
 			<directory suffix=".tst">src/tests/Behavioral</directory>
       <directory suffix=".tst">src/tests/Creational</directory>
       <directory suffix=".tst">src/tests/Structural</directory>
