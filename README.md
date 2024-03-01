@@ -1,4 +1,4 @@
-# Patterns
+# design-patterns
 
 ## Description
 
